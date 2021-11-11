@@ -32,3 +32,6 @@ func NewValidationError(message string) *AppError {
 func NewJwtError(message string) *AppError {
 	return &AppError{http.StatusForbidden, message}
 }
+func NewUnauthorisedError(message string) *AppError {
+	return &AppError{http.StatusUnauthorized, message}
+}
