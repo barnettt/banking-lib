@@ -29,3 +29,6 @@ func NewPayloadParseError(message string) *AppError {
 func NewValidationError(message string) *AppError {
 	return &AppError{http.StatusUnprocessableEntity, message}
 }
+func NewJwtError(message string) *AppError {
+	return &AppError{http.StatusForbidden, message}
+}
